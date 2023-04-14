@@ -63,7 +63,7 @@ nnoremap("<A-k>", "<Esc>:m .-2<CR>==gi")
 
 -- whichkey dump 
 nnoremap("<leader>a", "<cmd>Alpha<cr>")
-nnoremap("<leader>c", "<cmd>Bdelete!<CR>")
+nnoremap("<leader>c", "<cmd>bd!<CR>")
 nnoremap("<leader>w", "<cmd>w!<CR>")
 nnoremap("<leader>q", "<cmd>q!<CR>")
 nnoremap("<leader>e", "<cmd>Ex<cr>")
