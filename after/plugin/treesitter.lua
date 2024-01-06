@@ -1,6 +1,6 @@
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
-  ensure_installed = { "vimdoc", "javascript", "typescript", "c", "lua", "rust" },
+  ensure_installed = { "templ", "vimdoc", "javascript", "typescript", "c", "lua", "rust", "go" },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
@@ -20,3 +20,8 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = false,
   },
 }
+vim.filetype.add({ extension = { templ = "templ" } })
+vim.api.nvim_create_autocmd("BufEnter", {
+    pattern = "*.templ",
+    callback = function() vim.cmd("TSBufEnable highlight") end
+})
